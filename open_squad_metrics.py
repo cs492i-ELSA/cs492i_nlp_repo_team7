@@ -430,8 +430,7 @@ def select_best_predictions(all_nbest_json, null_ths=0.4, is_test=True):
         opts = best_answer_max_prob[qid]
         opts = sorted(opts.items(), key=lambda x: x[1], reverse=True)
         ans, prob = opts[0]
-        if prob <= 0.3:
-        # if prob < null_ths:
+        if prob <= -0.2:
             ans = ""
         best_answer_predictions[qid] = ans
 
@@ -613,9 +612,7 @@ def compute_predictions_logits(
         for (i, entry) in enumerate(nbest):
             output = collections.OrderedDict()
             output["text"] = entry.text
-            # output["probability"] = probs[i] - probs[null_index]
-            # output["probability"] = probs[i] - probs[null_index] + 2 * ans_prob - 1
-            output["probability"] = probs[i] * ans_prob
+            output["probability"] = probs[i] - probs[null_index] + 2 * ans_prob - 1
             output["start_logit"] = entry.start_logit
             output["end_logit"] = entry.end_logit
             nbest_json.append(output)
