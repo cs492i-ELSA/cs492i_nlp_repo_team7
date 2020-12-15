@@ -21,7 +21,8 @@ It includes additional verifier as its components.
           self.init_weights()
       ...
 The architecture of model is similar to this figure.
-!\[model_architecture] (/static/model_architecture.JPG)
+
+![model_architecture](./static/model_architecture.JPG)
 
 ## Appliance of Criteria
 Definition of criteria can be found in open_squad_metrics.py.
@@ -45,9 +46,13 @@ Definition of criteria can be found in open_squad_metrics.py.
           ...
  
 ## Result
-+Main result comparing candidates for answer aggregation criterias.
-!\[Main Result](/static/main_result)
-+Influence of extended dataset.
+Main result comparing candidates for answer aggregation criterias   
+   
+<img src="./static/main_result.JPG" width="400"/>
+
+Influence of extended dataset    
+   
+<img src="./static/pretrain_with_extended_dataset.JPG" width="400"/>
 
 ## Running
 It is recommended to use run_nsml.sh for execution. 
