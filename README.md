@@ -54,6 +54,10 @@ Influence of extended dataset
    
 <img src="./static/pretrain_with_extended_dataset.JPG" width="400"/>
 
+Best Record in LeaderBoard
++score (test-f1): 0.7158 (1st place)
++session-checkpoint: kaist007/korquad-open-ldbd3/417-electra_best
+
 ## Running
 It is recommended to use run_nsml.sh for execution. 
 Theses are important arguments for experiments:
