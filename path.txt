@@ -1,0 +1,2 @@
+session: kaist007/korquad-open-ldbd3/417 
+checkpoint: electra_best
